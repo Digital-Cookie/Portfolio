@@ -43,20 +43,21 @@ if (location.hash) {
 openProject(location.hash.replace("#", ""));
 }
 
-const video = document.getElementById("project-video");
+const videos = document.querySelectorAll(".project-video");
 const observer = new IntersectionObserver(
-(entries) => {
+  (entries) => {
     entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        video.currentTime = 0; // restart from beginning
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.currentTime = 0;
         video.play();
-    } else {
+      } else {
         video.pause();
-    }
+      }
     });
-},
-{
-    threshold: 0.1 // % of video must be visible
-}
+  },
+  {
+    threshold: 0.1
+  }
 );
-observer.observe(video);
+videos.forEach(video => observer.observe(video));

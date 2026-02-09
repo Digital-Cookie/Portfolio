@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
+  <title>Ray Tho | Portfolio</title>
+  <link rel="icon" type="image/png" href="src/web_icon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,7 +45,7 @@
         <!-- Project 1 -->
         <a class="project-card" href="#project-1" data-id="1">
           <div class="video-wrap">
-            <video id="project-video" muted loop autoplay playsinline poster="https://via.placeholder.com/900x500.png?text=Project+1">
+            <video class="project-video" muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
               <source src="src/D64.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -57,6 +58,25 @@
           <div class="project-info">
             <h3>Diamond64</h3>
             <p>이 게임은 <i>2048</i>의 영감을 받아 AI 도구를 활용하여 만들었습니다.<br/>그리드의 타일을 네 방향 중 하나로 슬라이드하여 같은 그림의 타일을 합쳐 새로운 타일을 발견하는 퍼즐 게임.</p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a class="project-card" href="#project-2" data-id="2">
+          <div class="video-wrap">
+            <video class="project-video" muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
+              <source src="src/TET-TET.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-dim"></div>
+            <div class="video-overlay">
+              <div class="size"><img src="src/team_icon.png" alt="Size">1</div>
+              <div class="duration"><img src="src/time_icon.png" alt="Size">7일</div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>TET-TET</h3>
+            <p>React를 사용하여 <i>Tetris</i>에 트위스트를 넣었습니다.<br/>일반 테트리스와 달리, TET-TET에서는 블록이 매번 떨어지는 방향이 좌•우 번갈아가며 바뀝니다.</p>
           </div>
         </a>
 
@@ -124,20 +144,44 @@
   </main>
 
   <!-- Project detail page -->
+  <!-- Project 1 -->
   <div id="project-1" class="project-page" aria-hidden="true">
-    <div class="top">
-      <div class="main-title">Diamond64</div>
+    <div class="project-detail-header">
+      <div class="project-detail-title">Diamond64</div>
       <button class="close-btn" data-close>Close ✕</button>
     </div>
     <div class="content">
       <div class="project-banner">
-        <video id="project-video" muted loop autoplay playsinline>
+        <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
           <source src="src/D64.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-      <h3>About</h3>
-      <a href="https://Digital-Cookie.Itch.io/D64" target="_blank">https://Digital-Cookie.Itch.io/D64</a>
+      <h3>Link:</h3>
+      <a href="https://Digital-Cookie.Itch.io/D64" target="_blank" class="muted">https://Digital-Cookie.Itch.io/D64</a>
+      <br/><br/><br/>
+      <h3>Information</h3>
+      <p style="color: #999;">coming soon</p>
+    </div>
+  </div>
+  <!-- Project 2 -->
+  <div id="project-2" class="project-page" aria-hidden="true">
+    <div class="project-detail-header">
+      <div class="project-detail-title">TET-TET</div>
+      <button class="close-btn" data-close>Close ✕</button>
+    </div>
+    <div class="content">
+      <div class="project-banner">
+        <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
+          <source src="src/TET-TET.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <h3>Link:</h3>
+      <a href="https://digital-cookie.github.io/TET-TET/" target="_blank" class="muted">https://digital-cookie.github.io/TET-TET/</a>
+      <br/><br/><br/>
+      <h3>Information</h3>
+      <p style="color: #999;">coming soon</p>
     </div>
   </div>
 
