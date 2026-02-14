@@ -9,38 +9,44 @@ document.querySelectorAll('.project-card').forEach(card=>{
 });*/
 
 function openProject(id) {
-const page = document.getElementById(id);
-if (!page) return;
-page.style.display = "flex";
-page.setAttribute("aria-hidden", "false");
-document.body.style.overflow = "hidden";
+  const page = document.getElementById(id);
+  if (!page) return;
+  page.style.display = "flex";
+  page.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
 }
 
 function closeAllProjects() {
-document.querySelectorAll(".project-page").forEach(p => {
+  document.querySelectorAll(".project-page").forEach(p => {
     p.style.display = "none";
     p.setAttribute("aria-hidden", "true");
-});
-document.body.style.overflow = "";
-history.pushState("", document.title, window.location.pathname);
+  });
+  document.body.style.overflow = "";
+  history.pushState("", document.title, window.location.pathname);
 }
 
 document.querySelectorAll(".project-card").forEach(card => {
-card.addEventListener("click", e => {
+  card.addEventListener("click", e => {
     e.preventDefault();
     const id = "project-" + card.dataset.id;
-    location.hash = id;
     closeAllProjects();
+    location.hash = id;
     openProject(id);
-});
+  });
 });
 
 document.querySelectorAll("[data-close]").forEach(btn => {
-btn.addEventListener("click", closeAllProjects);
+  btn.addEventListener("click", closeAllProjects);
 });
 
-if (location.hash) {
-openProject(location.hash.replace("#", ""));
+const hash = location.hash.replace("#", "");
+if (hash.startsWith("project-")) {
+  closeAllProjects();
+  openProject(hash);
+}
+else {
+  closeAllProjects();
+  document.getElementById(hash).scrollIntoView({ behavior: "smooth" });
 }
 
 const videos = document.querySelectorAll(".project-video");
