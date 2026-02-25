@@ -1,53 +1,75 @@
-// Insert current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/*/ Auto-play videos on hover for better UX (muted required for autoplay in many browsers)
-document.querySelectorAll('.project-card').forEach(card=>{
-    const vid = card.querySelector('video');
-    card.addEventListener('mouseenter', ()=>{ if(vid) vid.play() });
-    card.addEventListener('mouseleave', ()=>{ if(vid) {vid.pause(); vid.currentTime = 0} });
-});*/
+const userLang = navigator.language || navigator.userLanguage;
 
-function openProject(id) {
-  const page = document.getElementById(id);
-  if (!page) return;
-  page.style.display = "flex";
-  page.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
+if (userLang && userLang.startsWith("ko")) {
+  document.getElementById("header-name").textContent = "도 휘";
 }
 
-function closeAllProjects() {
-  document.querySelectorAll(".project-page").forEach(p => {
-    p.style.display = "none";
-    p.setAttribute("aria-hidden", "true");
-  });
-  document.body.style.overflow = "";
-  history.pushState("", document.title, window.location.pathname);
-}
+let scrollPosition = 0;
+let openedViaClick = false;
 
-document.querySelectorAll(".project-card").forEach(card => {
-  card.addEventListener("click", e => {
+document.querySelectorAll('.project-card').forEach(link => {
+  link.addEventListener('click', function(e) {
     e.preventDefault();
-    const id = "project-" + card.dataset.id;
-    closeAllProjects();
-    location.hash = id;
-    openProject(id);
+
+    const id = this.getAttribute('href');
+    const popup = document.querySelector(id);
+
+    scrollPosition = window.scrollY;
+    openedViaClick = true;
+
+    popup.classList.add('active');
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.width = '100%';
+
+    history.pushState({popup: id}, '', id);
   });
 });
 
-document.querySelectorAll("[data-close]").forEach(btn => {
-  btn.addEventListener("click", closeAllProjects);
+function closePopup() {
+  document.querySelectorAll('.project-page').forEach(p => p.classList.remove('active'));
+
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+
+  window.scrollTo(0, scrollPosition);
+}
+
+document.querySelectorAll('.close-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (openedViaClick) {
+      history.back();
+    } else {
+      history.replaceState({}, '', window.location.pathname);
+      closePopup();
+    }
+  });
 });
 
-const hash = location.hash.replace("#", "");
-if (hash.startsWith("project-")) {
-  closeAllProjects();
-  openProject(hash);
-}
-else {
-  closeAllProjects();
-  document.getElementById(hash).scrollIntoView({ behavior: "smooth" });
-}
+window.addEventListener('popstate', function(e) {
+  closePopup();
+});
+
+window.addEventListener('load', function() {
+  if (location.hash) {
+    const popup = document.querySelector(location.hash);
+    if (popup) {
+      scrollPosition = window.scrollY;
+      popup.classList.add('active');
+
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = '100%';
+
+      openedViaClick = false;
+    }
+  }
+});
 
 const videos = document.querySelectorAll(".project-video");
 const observer = new IntersectionObserver(

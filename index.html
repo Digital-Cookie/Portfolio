@@ -11,7 +11,7 @@
   <header>
     <div class="header-inner">
       <div class="headline">
-        <a href="#introduction">Ray Doe</a>
+        <a href="#introduction" id="header-name">Ray Doe</a>
         <p>Game Programmer</p>
       </div>
       <nav>
@@ -28,24 +28,25 @@
     </div>
   </header>
 
+  <div id="introduction"></div>
   <main>
-    <!-- Part 1 -->
-    <section id="introduction" class="myself container">
+    <!-- Introduction -->
+    <section class="myself container">
       <div class="center"><img src="src/profile_low_res.jpg" alt="photo" /></div>
       <div class="text">
         <p>즐겁고 부드러운 게임 플레이를 위해<br/>깔끔한 코드와 체계적인 설계를 바탕으로<br/>재미와 품질을 동시에 추구하는 프로그래머</p>
       </div>
     </section>
 
-    <!-- Part 2 -->
+    <!-- Portfolio -->
     <section id="projects" class="container">
       <h2 class="sub-header">Portfolio</h2>
       <div class="projects-grid" id="projectsGrid">
 
         <!-- Project 1 -->
-        <a class="project-card" href="#project-1" data-id="1">
+        <a class="project-card" href="#project-1">
           <div class="video-wrap">
-            <video class="project-video" muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
+            <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
               <source src="src/D64.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -62,9 +63,9 @@
         </a>
 
         <!-- Project 2 -->
-        <a class="project-card" href="#project-2" data-id="2">
+        <a class="project-card" href="#project-2">
           <div class="video-wrap">
-            <video class="project-video" muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
+            <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
               <source src="src/TET-TET.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -83,7 +84,7 @@
       </div>
     </section>
 
-    <!-- Part 3 -->
+    <!-- Skills -->
     <section id="skills" class="container">
       <h2 class="sub-header2">Skills</h2>
       <div class="skills">
@@ -129,7 +130,7 @@
       </div>
     </section>
 
-    <!-- Part 4 -->
+    <!-- Information -->
     <section id="contact" class="container">
       <div class="info-green">
         <h2>Information</h2>
@@ -143,15 +144,17 @@
     </footer>
   </main>
 
-  <!-- Project detail page -->
+  <!-- Project details page -->
   <!-- Project 1 -->
-  <div id="project-1" class="project-page" aria-hidden="true">
+  <div id="project-1" class="project-page">
     <div class="project-detail-header">
-      <div class="project-detail-title">Diamond64</div>
-      <button class="close-btn" data-close>Close ✕</button>
+      <div class="header-inner">
+        <div class="project-detail-title">Diamond64</div>
+        <a href="#" class="close-btn">Close ✕</a>
+      </div>
     </div>
-    <div class="content">
-      <div class="project-banner">
+    <div class="project-detail-content">
+      <div class="project-video">
         <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
           <source src="src/D64.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -165,13 +168,13 @@
     </div>
   </div>
   <!-- Project 2 -->
-  <div id="project-2" class="project-page" aria-hidden="true">
+  <div id="project-2" class="project-page">
     <div class="project-detail-header">
       <div class="project-detail-title">TET-TET</div>
-      <button class="close-btn" data-close>Close ✕</button>
+      <a href="#" class="close-btn">Close ✕</a>
     </div>
-    <div class="content">
-      <div class="project-banner">
+    <div class="project-detail-content">
+      <div class="project-video">
         <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
           <source src="src/TET-TET.mp4" type="video/mp4">
           Your browser does not support the video tag.
