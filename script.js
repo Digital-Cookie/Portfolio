@@ -4,6 +4,12 @@ const userLang = navigator.language || navigator.userLanguage;
 
 if (userLang && userLang.startsWith("ko")) {
   document.getElementById("header-name").textContent = "도 휘";
+
+  const EnElements = document.querySelectorAll('.English');
+  const KrElements = document.querySelectorAll('.Korean');
+
+  EnElements.forEach(function(el) {el.style.display = 'none';});
+  KrElements.forEach(function(el) {el.style.display = 'block';});
 }
 
 let scrollPosition = 0;
