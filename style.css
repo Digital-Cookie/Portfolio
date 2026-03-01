@@ -57,7 +57,7 @@ section{padding:56px 20px}
 .video-overlay .duration{display:inline-block;width:128px;}
 
 .project-info{height:212px;padding:24px}
-.project-info h3{margin:0 0 24px 0;font-size:22px;font-weight:600;transition:color .2s ease}
+.project-info h3{margin:0 0 20px 0;font-size:22px;font-weight:600;transition:color .2s ease}
 .project-info h4{margin:0;font-size:13px;color:var(--muted);font-weight:600}
 .project-info p{margin-top:10px;color:#dddddd;font-size:18px}
 
@@ -89,7 +89,7 @@ section{padding:56px 20px}
 .project-detail-content .display-flex{margin-bottom:10px;}
 .project-link{margin-bottom: 8px;}
 .project-link h3{margin: 10px 0 10px 0;}
-.project-link a{margin-left:10px;text-decoration:underline;font-size:1em;}
+.project-link a{text-decoration:underline;font-size:1em;}
 
 
 /* other */
@@ -148,14 +148,13 @@ hr{height:3px;width:100%;flex-shrink:0;margin: 30px 0;border:none;background-col
     hr{margin: 8px 0;}
 
     .project-detail-header{height:110px;width:100%;max-width:100%;padding: 24px 16px 16px 16px;}
-    .project-detail-header h1{font-size:32px;}
-    .project-detail-header .header-inner{height: auto;}
+    .project-detail-header h1{font-size:30px;}
+    .project-detail-header .header-inner{height: auto;padding: 10px;}
     .close-btn{margin-top:3px;}
     .project-video{margin: 8px 0 22px 0;}
     .project-detail-content .details{font-size:12px;}
     .project-detail-content strong{margin-right:2px;}
     .project-link h3{margin: 12px 0 10px 0;font-size:14px;}
     .project-link p{font-size:12px;}
-    .project-link a{margin-left:4px;}
 }
 

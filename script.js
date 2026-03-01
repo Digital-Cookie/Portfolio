@@ -3,8 +3,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const userLang = navigator.language || navigator.userLanguage;
 
 if (userLang && userLang.startsWith("ko")) {
-  document.getElementById("header-name").textContent = "도 휘";
-
   const EnElements = document.querySelectorAll('.English');
   const KrElements = document.querySelectorAll('.Korean');
 
