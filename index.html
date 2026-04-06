@@ -18,9 +18,11 @@
         <a href="https://github.com/Digital-Cookie" target="_blank" rel="noopener noreferrer">
           <img src="src/github_icon.png" alt="Github" width="64" height="64">
         </a>
+        <!--
         <a href="https://www.gamejob.co.kr/User/Resume/View?R_NO=369598" target="_blank" rel="noopener noreferrer">
           <img src="src/gamejob_icon.png" alt="Github" width="64" height="64">
         </a>
+        -->
         <a href="#contact">
           <img src="src/email_icon.png" alt="Github" width="64" height="64">
         </a>
@@ -32,15 +34,16 @@
   <main>
     <!-- Introduction -->
     <section class="myself container">
-      <div class="center"><img src="src/profile_low_res.jpg" alt="photo" /></div>
+      <div class="center"><img src="src/profile_pic.jpg" alt="photo" /></div>
       <div class="text">
-        <p>즐겁고 부드러운 게임 플레이를 위해<br/>깔끔한 코드와 체계적인 설계를 바탕으로<br/>재미와 품질을 동시에 추구하는 프로그래머</p>
+        <p>안녕하세요!<br/>카레, 코딩, 캠핑을 좋아하는 개발자입니다.<br/>미국, 일본, 싱가포르에서 학교를 다니며<br/>지금은 한국에 살고 있습니다!</p>
       </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="projects" class="container">
-      <h2 class="sub-header">Portfolio</h2>
+    <!-- Portfolio Personal -->
+    <section id="personal_projects" class="container">
+      <div class="English"><h2 class="sub-header">Personal Projects</h2></div>
+      <div class="Korean"><h2 class="sub-header">개인 작품</h2></div>
       <div class="projects-grid" id="projectsGrid">
 
         <!-- Project 1 -->
@@ -59,11 +62,11 @@
           <div class="project-info">
             <div class="English">
               <h3>Diamond64</h3>
-              <p>This game was developed to explore and illustrate my proficiency in utilizing LLMs. Inspired by <i>2048</i>, this is a puzzle game where players slide tiles on a grid in one of four directions to combine them and create new tiles.</p>
+              <p>This game was inspired by <i>2048</i>. Diamond64 is a puzzle game where players slide tiles on a grid in one of four directions to combine them and create new tiles.</p>
             </div>
             <div class="Korean">
               <h3>Diamond64</h3>
-              <p>이 게임은 LLM들을 탐구하며 AI 활용 능력을 선보이기 위해 만들었습니다. <i>2048</i>의 영감을 받아, 플레이어는 네 가지 방향 중 하나의 방향으로 타일을 슬라이드하여 같은 그림의 타일끼리 합쳐 새로운 타일을 만들어내는 퍼즐 게임입니다.</p>
+              <p>이 게임은 <i>2048</i>의 영감을 받아 만들었습니다. D64에서 플레이어는 네 가지 방향 중 하나의 방향으로 타일을 슬라이드하여 같은 그림의 타일끼리 합쳐 새로운 타일을 만들어내는 퍼즐 게임입니다.</p>
             </div>
           </div>
         </a>
@@ -91,6 +94,40 @@
             </div>
           </div>
         </a>
+        <!-- Project 5 -->
+        <a class="project-card" href="#project-5">
+          <div class="video-wrap">
+            <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
+              <source src="src/Underwatch.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-dim"></div>
+            <div class="video-overlay">
+              <div class="size"><img src="src/team_icon.png" alt="Size">4</div>
+              <div class="duration"><img src="src/time_icon.png" alt="Size">1개월</div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="English">
+              <h3>Underwatch</h3>
+              <p>This is a real-time 3D FPS game developed with a custom game engine using DirectX. The objective of this project is to demonstrate 3D graphics rendering, physics and collisions, networked multiplayer functionality, and more.</p>
+            </div>
+            <div class="Korean">
+              <h3>언더워치</h3>
+              <p>이 게임은 DirectX로 커스텀 게임 엔진을 개발하여 만든 실시간 3D FPS 게임입니다. 이 프로젝트의 목적은 3D 그래픽 렌더링, 물리 및 충돌, 멀티플레이어 네트워킹 기능 등에 대한 실질적인 경험을 얻기 위해 개발되었습니다.</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Portfolio Commissioned -->
+    <section id="commissioned_projects" class="container portfolio_commissioned">
+      <div class="English"><h2 class="sub-header">Commissioned Projects</h2></div>
+      <div class="Korean"><h2 class="sub-header">의뢰 작품</h2></div>
+      <div class="projects-grid" id="projectsGrid">
+
         <!-- Project 3 -->
         <a class="project-card" href="#project-3">
           <div class="video-wrap">
@@ -139,31 +176,7 @@
             </div>
           </div>
         </a>
-        <!-- Project 5 -->
-        <a class="project-card" href="#project-5">
-          <div class="video-wrap">
-            <video muted loop autoplay playsinline poster="src/video_loading_poster.jpg">
-              <source src="src/Underwatch.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="video-dim"></div>
-            <div class="video-overlay">
-              <div class="size"><img src="src/team_icon.png" alt="Size">4</div>
-              <div class="duration"><img src="src/time_icon.png" alt="Size">1개월</div>
-            </div>
-          </div>
-          <div class="project-info">
-            <div class="English">
-              <h3>Underwatch</h3>
-              <p>This is a real-time 3D FPS game developed with a custom game engine using DirectX. The objective of this project is to demonstrate 3D graphics rendering, physics and collisions, networked multiplayer functionality, and more.</p>
-            </div>
-            <div class="Korean">
-              <h3>언더워치</h3>
-              <p>이 게임은 DirectX로 커스텀 게임 엔진을 개발하여 만든 실시간 3D FPS 게임입니다. 이 프로젝트의 목적은 3D 그래픽 렌더링, 물리 및 충돌, 멀티플레이어 네트워킹 기능 등에 대한 실질적인 경험을 얻기 위해 개발되었습니다.</p>
-            </div>
-          </div>
-        </a>
- 
+
       </div>
     </section>
 
@@ -217,7 +230,7 @@
     <section id="contact" class="container">
       <div class="info-green">
         <h2>Information</h2>
-        <p class="info-text">게임잡에서 저의 <a href="https://www.gamejob.co.kr/User/Resume/View?R_NO=369598" target="_blank">이력서</a>를 확인할 수 있습니다.<br/><br/><br/></p>
+        <p class="info-text">문제를 논리적으로 바라보고, 구조를 깔끔하게 정리하는 것을 중요하게 생각합니다.<br/>복잡한 문제도 차근차근 나누어 이해하며, 더 효율적인 해결 방법을 찾는 데 집중합니다.<br/><br/>이러한 접근을 바탕으로, 명확하고 정돈된 방식으로 문제를 해결하는 프로그래머입니다.<br/>방문해 주셔서 감사드리며, 궁금한 점 있으면 언제든 메시지 주세요!<br/><br/></p>
         <p class="info-footer">이매일: Ray64Digital@Gmail.com</p>
       </div>
     </section>
@@ -255,7 +268,7 @@
             <p class="details"><strong>Team Size|Role: </strong>1 | Designer & Developer</p>
             <p class="details"><strong>Duration: </strong>1 Day <i>(2026.01)</i></p>
             <p class="details"><strong>Created With: </strong>Unity, Photoshop</p>
-            <p class="details"><strong>AI Used: </strong>Gemini, Claude, ChatGPT, Perchance AI</p>
+            <p class="details"><strong>AI Used: </strong>None</p>
           </div>
         </div>
         <hr>
@@ -292,7 +305,7 @@
             <p class="details"><strong>팀 크기|역활: </strong>1 | 디자이너 & 개발자</p>
             <p class="details"><strong>기간: </strong>1 일 <i>(2026.01)</i></p>
             <p class="details"><strong>개발 도구: </strong>Unity, Photoshop</p>
-            <p class="details"><strong>활용된 AI: </strong>Gemini, Claude, ChatGPT, Perchance AI</p>
+            <p class="details"><strong>활용된 AI: </strong>없음</p>
           </div>
         </div>
         <hr>
